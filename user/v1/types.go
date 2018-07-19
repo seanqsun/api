@@ -167,7 +167,7 @@ type IdentityMetadata struct {
 
 	// IdentityProviderExtra contains any additional information that the IDP thought was interesting
 	// Difference between this and normal extra which contains scopes?
-	IdentityProviderExtra map[string][]string `json:"identityProviderExtra,omitempty" protobuf:"bytes,8,opt,name=identityProviderExtra"`
+	IdentityProviderExtra map[string]OptionalNames `json:"identityProviderExtra,omitempty" protobuf:"bytes,8,rep,name=identityProviderExtra"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
